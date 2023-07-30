@@ -1,0 +1,50 @@
+﻿@using Hospital.BL.ViewModels
+@model IEnumerable<DoctorReadVM>
+
+<table class="table table-striped  table-bordered border-success">
+    <thead class="align text-center">
+        <tr >
+
+            <th>Id</th>
+            <th>Name</th>
+            <th>Specialization</th>
+            <th>Salary</th>
+            <th>PerformanceRate</th>
+            <th>Action</th>
+            
+        </tr>
+    </thead>
+    <tbody class="align text-center">
+        @foreach (var doctor in Model)
+        {
+            <tr >
+                <td >@doctor.Id</td>
+                <td >@doctor.Name</td>
+                <td >@doctor.Specialization</td>
+                <td >@doctor.Salary</td>
+                <td >@doctor.PerformanceRate</td>
+                <td >
+                    <div class="d-flex">
+                    <div class="m-auto">
+                        <a asp-action="Details" asp-route-id="@doctor.Id">
+                            <i class="fas fa-info-circle custom-color"></i>
+                        </a>
+                    </div>
+                    <div class="m-auto">
+                        <a asp-action="Edit" asp-route-id="@doctor.Id">
+                            <i class="fas fa-edit text-warning"></i>
+                        </a>
+                    </div>
+                    <div class="m-auto">
+                        <form asp-action="Delete" asp-route-id="@doctor.Id" method="post">
+                            <button type="submit" class="btn btn-link text-danger ">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </form>
+                    </div>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

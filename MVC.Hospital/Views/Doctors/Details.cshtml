@@ -1,0 +1,36 @@
+﻿
+@using Hospital.BL
+@using Hospital.DAL
+@model DoctorDetailsVM
+
+<div class="d-flex justify-content-center">
+    <div class="card mb-4 custom-bg-color col-5 ">
+        <div class="card-header text-white">
+            <h1 class="card-header text-center">Doctor Details</h1>
+        </div>
+        <div class="card-body">
+            <h4>Name: @Model.Name</h4>
+            <h4>Specialization: @Model.Specialization</h4>
+            <h4>Performance Rate: @Model.PerformanceRate</h4>
+            <h4>Number Of Patients: @Model.Patients.Count</h4>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <div class="card mb-3">
+                    <h2 class="card-header text-center">Patients Details</h2>
+                </div>
+                @foreach (var patient in Model.Patients)
+                {
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">(@(Model.Patients.IndexOf(patient) + 1)) Patient Name: @patient.Name</h5>
+                            <h5 class="card-text">Number of Issues: @patient.NumberOfIssues</h5>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+

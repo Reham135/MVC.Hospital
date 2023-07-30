@@ -1,0 +1,102 @@
+﻿@*@using Hospital.BL
+@using Hospital.MVC;
+@model PatientAddVM
+
+@{
+    List<SelectListItem> doctors = ViewData[Constants.Doctors] as List<SelectListItem> ?? new();
+}
+<div class="d-flex justify-content-center">
+    <div class="col-4 border border-success border-3 bg-light border rounded-3">
+        <form class="m-3" asp-action="AddPatient" method="post">
+            <div class="form-row">
+
+
+                <div class="form-group  m-2">
+                    <label>Name</label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+
+                </div>
+
+
+                <div class="form-group  m-2">
+                    <label asp-for="DoctorId">Doctor</label>
+                    <select asp-for="DoctorId" asp-items="doctors" class="form-control"></select>
+                    <span asp-validation-for="DoctorId" class="text-danger"></span>
+
+                </div>
+
+                <div class="form-group  m-2">
+                    <label asp-for="IssuesIds"></label>
+                    <select asp-for="IssuesIds" asp-items="ViewBag.Issues" class="form-control"></select>
+                </div>
+
+
+                <div class="d-flex justify-content-center m-5">
+                    <button class="btn btn-success">Add New Patient</button>
+                </div>
+               
+
+
+            </div>
+        </form>
+    </div>
+</div>*@
+
+@using Hospital.BL
+@using Hospital.MVC;
+@model PatientAddVM
+
+@{
+    List<SelectListItem> doctors = ViewData[Constants.Doctors] as List<SelectListItem> ?? new();
+}
+<div class="d-flex justify-content-center">
+    <div class="col-4 border border-success border-3 bg-light border rounded-3">
+        <form class="m-3" asp-action="AddPatient" method="post">
+            <div class="form-row">
+
+
+                <div class="form-group  m-2">
+                    <label>Name</label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+
+                </div>
+
+
+                <div class="form-group  m-2">
+                    <label asp-for="DoctorId">Doctor</label>
+                    <select asp-for="DoctorId" asp-items="doctors" class="form-control"></select>
+                    <span asp-validation-for="DoctorId" class="text-danger"></span>
+
+                </div>
+                <div class="form-group  m-2">
+                    <label asp-for="IssuesId"></label>
+                    <select asp-for="IssuesId" asp-items="@ViewBag.Issues" class="form-control"></select>
+                </div>
+
+                
+
+
+                <div class="d-flex justify-content-center m-5">
+                    <button class="btn btn-success">Add New Patient</button>
+                </div>
+               
+
+
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+@section scripts{
+    <partial name="_ValidationScriptsPartial.cshtml" />
+}
+
