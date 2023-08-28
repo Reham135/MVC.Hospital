@@ -69,6 +69,28 @@ namespace Hospital.MVC.Controllers
         public IActionResult AddPatient(PatientAddVM patientAddVM)
         {
             _patientManager.AddUsingVM(patientAddVM);
+            TempData[Constants.Operation] = Constants.AddPatient;
+            return RedirectToAction(nameof(Index));
+        }
+        #endregion
+
+        #region Edit
+        //Edit
+        [HttpGet]
+        public IActionResult Edit(Guid id)
+        {
+            viewdataDoctor();
+            viewBagIssue();
+            PatientEditVM? model = _patientManager.GetPatientByIdASEditVM(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(PatientEditVM patientVM)
+        {
+            if (!ModelState.IsValid) { return View(); }
+            _patientManager.EditUsingVM(patientVM);
+            TempData[Constants.Operation] = Constants.EditPatient;
             return RedirectToAction(nameof(Index));
         }
         #endregion
@@ -78,6 +100,7 @@ namespace Hospital.MVC.Controllers
         public IActionResult Delete(Guid id)
         {
             _patientManager.Delete(id);
+            TempData[Constants.Operation] = Constants.Doctors;
             return RedirectToAction(nameof(Index));
         }
         #endregion

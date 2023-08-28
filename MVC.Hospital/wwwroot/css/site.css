@@ -30,4 +30,22 @@ body {
     color: #67c7c5;
 }
 
+/* Custom CSS class for toaster center positioning */
+.toaster-center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* Custom CSS for different Toastr colors */
+.toaster-green {
+    background-color: #4caf50; /* Green color for Add */
+}
 
+.toaster-yellow {
+    background-color: #ffc107; /* Yellow color for Edit */
+}
+
+.toaster-red {
+    background-color: #f44336; /* Red color for Delete */
+}

@@ -1,4 +1,5 @@
 ﻿@using Hospital.BL
+@using Hospital.MVC;
 @model IEnumerable<PatientReadVM>
 
     <div class="container col-8">
@@ -43,3 +44,28 @@
     </table>
 
 </div>
+
+
+@*for toaster feature*@
+@section scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+}
+    <script>
+        $(document).ready(function () {
+            var operation = '@TempData[@Constants.Operation]';
+            toastr.options = { positionClass: 'toaster-center' }; //css style
+            switch (operation) {
+                case '@Constants.AddPatient':
+                    toastr.success('Patient Added Successfully');
+                    break;
+                case '@Constants.EditPatient':
+                    toastr.warning('Patient Edited Successfully');
+                    break;
+                case '@Constants.DeletePatient':
+                    toastr.error('Patient Deleted Successfully');
+                    break;
+            }
+        });
+    </script>

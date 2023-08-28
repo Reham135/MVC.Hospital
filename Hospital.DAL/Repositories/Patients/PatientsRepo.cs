@@ -22,5 +22,14 @@ namespace Hospital.DAL
                 .Include(p => p.Issues)
                 .FirstOrDefault(p => p.Id == id);
         }
+
+        public Patient? GetByIdWithIssues(Guid id)
+        {
+            return _context.Patients
+                .Include(p => p.Issues)
+                .FirstOrDefault(p => p.Id == id);
+                
+                
+        }
     }
 }

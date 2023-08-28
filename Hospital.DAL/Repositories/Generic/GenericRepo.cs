@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Hospital.DAL
 {
@@ -12,7 +13,7 @@ namespace Hospital.DAL
         }
         public IEnumerable<T> GetAll()
         {
-           return _context.Set<T>().AsNoTracking();
+            return _context.Set<T>().AsNoTracking();
         }
         public T? GetById(Guid id)
         {
@@ -24,7 +25,7 @@ namespace Hospital.DAL
         }
         public void Update(T entity)
         {
-           // _context.Set<T>().Update(entity);
+          // _context.Set<T>().Update(entity);
         }
         public void Delete(T entity)
         {

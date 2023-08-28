@@ -1,18 +1,21 @@
 ﻿using Hospital.BL;
 using Hospital.BL.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Hospital.MVC.Controllers
 {
     public class DoctorsController : Controller     
     {
         IDoctorsManager _doctorsManager;    
+       
 
         public DoctorsController(IDoctorsManager doctorsManager)  
         {
             _doctorsManager = doctorsManager;   
         }
-
+        
+      
 
         [HttpGet]
         public IActionResult Index()

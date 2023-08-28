@@ -27,7 +27,7 @@ namespace Hospital.BL
                     DoctorId = p.DoctorId,
                     Doctor = p.Doctor,
                     Name = p.Name,
-                    Issues = p.Issues,
+                    
 
                 });
             return patientsVM;
@@ -60,15 +60,15 @@ namespace Hospital.BL
 
         public void AddUsingVM(PatientAddVM patientVM)
         {
-            var selectedDoctor = _unitOfWork.DoctorsRepo.GetAll().FirstOrDefault(d => d.Id == patientVM.DoctorId);
-            var selectedIssues = _unitOfWork.IssuesRepo.GetAll().Where(x => patientVM.IssuesId.Contains(x.Id)).ToList();
+            var selectedDoctor = _unitOfWork.DoctorsRepo.GetById(patientVM.DoctorId);
+            var selectedIssues = _unitOfWork.IssuesRepo.GetAllWithTracking().Where(x => patientVM.IssuesId.Contains(x.Id)).ToList();
 
             var patient = new Patient
             {
                 Id = Guid.NewGuid(),
                 Name = patientVM.Name,
                 DoctorId = selectedDoctor.Id,
-                Issues = selectedIssues
+               Issues = selectedIssues
 
             };
             _unitOfWork.PatientsRepo.Add(patient);
@@ -78,12 +78,43 @@ namespace Hospital.BL
         public void Delete(Guid id)
         {
             Patient? patientdb = _unitOfWork.PatientsRepo.GetById(id);
+            
             _unitOfWork.PatientsRepo.Delete(patientdb);
             _unitOfWork.SaveChanges();
         }
 
-     
+        public PatientEditVM? GetPatientByIdASEditVM(Guid id)
+        {
+            Patient? patientdb = _unitOfWork.PatientsRepo.GetById(id);
+            if (patientdb == null)
+            {
+                return null;
+            }
+            PatientEditVM patientEditVM = new PatientEditVM()
+            {
+                Name=patientdb.Name,
+                DoctorId = patientdb.DoctorId,
+                IssuesId = patientdb.Issues.Select(x => x.Id).ToList(),
+                ID = patientdb.Id
+                
+            }; 
+            return patientEditVM;
+
+        }
+
+        public void EditUsingVM(PatientEditVM patientVM)
+        {
+            Patient? patientdb = _unitOfWork.PatientsRepo.GetByIdWithIssues(patientVM.ID);
+            if (patientdb == null) { return; }
+            patientdb.DoctorId= patientVM.DoctorId;
+            var selectedIssues = _unitOfWork.IssuesRepo.GetAllWithTracking().Where(a => patientVM.IssuesId.Contains(a.Id)).ToList();
+            patientdb.Issues = selectedIssues;
+            
+           _unitOfWork.PatientsRepo.Update(patientdb);
+            _unitOfWork.SaveChanges();
 
 
+        }
     }
+
 }

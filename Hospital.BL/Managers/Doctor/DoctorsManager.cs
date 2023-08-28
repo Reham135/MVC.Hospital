@@ -59,8 +59,9 @@ namespace Hospital.BL
                 .Select(p => new PatientChildVM
                 {
                     Name = p.Name,
-                    NumberOfIssues = p.Issues.Count
+                    NumberOfIssues=p.Issues.Count()
                 }).ToList()
+                
             };
         }
 

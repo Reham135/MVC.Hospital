@@ -3,6 +3,7 @@
     public interface IIssuesRepo:IGenericRepo<Issue>
     {
         Issue? GetIssueByName(string name);
+        IEnumerable<Issue> GetAllWithTracking();
 
     }
 }
