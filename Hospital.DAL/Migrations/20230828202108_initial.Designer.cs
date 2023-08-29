@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Hospital.DAL.Migrations
 {
     [DbContext(typeof(HospitalContext))]
-    [Migration("20230611171105_third")]
-    partial class third
+    [Migration("20230828202108_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -52,7 +52,7 @@ namespace Hospital.DAL.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("87125863-fd72-4e2b-ab90-69f43e8e5928"),
+                            Id = new Guid("76a11fcf-dd4d-4d0e-8404-fbf2c5ec8389"),
                             Name = "Jessie",
                             PerformanceRate = 65,
                             Salary = 27064m,
@@ -60,7 +60,7 @@ namespace Hospital.DAL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7f142e14-2fb1-4e88-bf7c-29c9d33faf60"),
+                            Id = new Guid("61a671d3-dfd6-40f0-aabb-929160a6e240"),
                             Name = "Judy",
                             PerformanceRate = 32,
                             Salary = 18711m,
@@ -68,7 +68,7 @@ namespace Hospital.DAL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b6132b34-f470-49cf-92c4-463cbc3f54e0"),
+                            Id = new Guid("c2c263ee-e86b-45f6-9410-c6d50285120c"),
                             Name = "Naomi",
                             PerformanceRate = 27,
                             Salary = 32145m,
@@ -76,7 +76,7 @@ namespace Hospital.DAL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("db630dc7-9e11-44a4-9c7b-3be040c8dfe1"),
+                            Id = new Guid("0e3fc154-d0af-4719-9ee8-a7d12563cced"),
                             Name = "Joann",
                             PerformanceRate = 72,
                             Salary = 9232m,
@@ -84,7 +84,7 @@ namespace Hospital.DAL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0028f547-7246-422b-a461-4e44e3020f17"),
+                            Id = new Guid("c9395ccb-e7aa-4add-9d5d-de61a0edd297"),
                             Name = "Judy",
                             PerformanceRate = 19,
                             Salary = 48498m,
@@ -92,7 +92,7 @@ namespace Hospital.DAL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("da1a37f1-8e7b-4864-b83c-0c1df42c4f80"),
+                            Id = new Guid("cdeb4840-da71-4c67-94e7-d124fa562d68"),
                             Name = "Alyssa",
                             PerformanceRate = 79,
                             Salary = 16586m,
@@ -100,7 +100,7 @@ namespace Hospital.DAL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5ca86934-de29-42cc-a77f-f57636a6a968"),
+                            Id = new Guid("33c644e0-7553-43db-991d-c450fd64adf8"),
                             Name = "Mable",
                             PerformanceRate = 5,
                             Salary = 33706m,
@@ -108,7 +108,7 @@ namespace Hospital.DAL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("15896574-6ca5-4ff6-8851-1bbb309a226f"),
+                            Id = new Guid("6f09a669-9484-451c-a3ba-4bbafce5a028"),
                             Name = "Paula",
                             PerformanceRate = 0,
                             Salary = 19094m,
@@ -116,7 +116,7 @@ namespace Hospital.DAL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0abcfd04-e9e8-47d0-a5ac-2e4ea829158a"),
+                            Id = new Guid("19d22233-9758-4e00-8ccd-92311e2ba8d6"),
                             Name = "Rafael",
                             PerformanceRate = 97,
                             Salary = 12266m,
@@ -124,7 +124,7 @@ namespace Hospital.DAL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("731d1963-a780-4942-ac97-50dc5fd2a8d6"),
+                            Id = new Guid("e73fc86f-0724-4a0c-a8fe-52fd7238932d"),
                             Name = "Sara",
                             PerformanceRate = 82,
                             Salary = 45041m,
@@ -149,37 +149,37 @@ namespace Hospital.DAL.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("7846fc85-347f-4c90-9107-90be08bd1c02"),
+                            Id = new Guid("3dd5245c-939d-4054-9fa1-0deeaeda24d6"),
                             Name = "Diabetes"
                         },
                         new
                         {
-                            Id = new Guid("1279c557-f58b-450d-8532-d9471f1320fc"),
+                            Id = new Guid("d40dda5c-e113-4d1d-9387-2b91c47517cc"),
                             Name = "Hypertension"
                         },
                         new
                         {
-                            Id = new Guid("dcbaf073-3660-4031-a7c4-24697b183f3a"),
+                            Id = new Guid("22512b93-8b8b-4139-8c25-75a0aadd9bea"),
                             Name = "Asthma"
                         },
                         new
                         {
-                            Id = new Guid("83adbdea-1fcd-4ae8-9a5a-bbe7fa9e0ba8"),
+                            Id = new Guid("9320a6e7-0b49-48fe-b141-1fa0c9e6a4f8"),
                             Name = "Depression"
                         },
                         new
                         {
-                            Id = new Guid("938c2da0-ae7f-43ee-9b4b-6e5e6fa91500"),
+                            Id = new Guid("0c7679e6-3214-425d-8e7f-53abe192a6cc"),
                             Name = "Arthritis"
                         },
                         new
                         {
-                            Id = new Guid("1539d778-d1a1-4848-bc76-75ec4175a718"),
+                            Id = new Guid("27dcfe13-9a6a-4b3a-b5c2-b8391d70690b"),
                             Name = "Allergy"
                         },
                         new
                         {
-                            Id = new Guid("e04d760e-b3ee-469b-b0ac-91b1595366b3"),
+                            Id = new Guid("de566c34-94a0-4756-b546-4e50a1f3dd71"),
                             Name = "Flu"
                         });
                 });
@@ -206,182 +206,182 @@ namespace Hospital.DAL.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("6065292f-89be-4285-9c22-69370be9cbd0"),
-                            DoctorId = new Guid("da1a37f1-8e7b-4864-b83c-0c1df42c4f80"),
+                            Id = new Guid("44bee883-c171-4dfa-9293-587db3cbf2c5"),
+                            DoctorId = new Guid("cdeb4840-da71-4c67-94e7-d124fa562d68"),
                             Name = "Dana"
                         },
                         new
                         {
-                            Id = new Guid("af29b6d9-6a7d-4896-8082-eef07f299e9d"),
-                            DoctorId = new Guid("15896574-6ca5-4ff6-8851-1bbb309a226f"),
+                            Id = new Guid("2389f8e0-92da-4ce3-ad5f-1299054c7425"),
+                            DoctorId = new Guid("6f09a669-9484-451c-a3ba-4bbafce5a028"),
                             Name = "Isaac"
                         },
                         new
                         {
-                            Id = new Guid("9849e376-36ee-4b41-84c1-a5ed1d2efe84"),
-                            DoctorId = new Guid("731d1963-a780-4942-ac97-50dc5fd2a8d6"),
+                            Id = new Guid("b5ba4cac-3caf-4b07-82e6-25d314edf40d"),
+                            DoctorId = new Guid("e73fc86f-0724-4a0c-a8fe-52fd7238932d"),
                             Name = "Damon"
                         },
                         new
                         {
-                            Id = new Guid("2d6b1e75-e41a-4702-a0d8-4443e2abdf88"),
-                            DoctorId = new Guid("0abcfd04-e9e8-47d0-a5ac-2e4ea829158a"),
+                            Id = new Guid("d75187c2-d690-4e59-960c-916d02be795c"),
+                            DoctorId = new Guid("19d22233-9758-4e00-8ccd-92311e2ba8d6"),
                             Name = "Miriam"
                         },
                         new
                         {
-                            Id = new Guid("7e7c5ca2-5bf5-49d1-ad8e-9cc754d1ef54"),
-                            DoctorId = new Guid("15896574-6ca5-4ff6-8851-1bbb309a226f"),
+                            Id = new Guid("310f2472-3b29-4114-9bb9-32a4de1a2744"),
+                            DoctorId = new Guid("6f09a669-9484-451c-a3ba-4bbafce5a028"),
                             Name = "Terence"
                         },
                         new
                         {
-                            Id = new Guid("a510d03c-0795-436e-845c-edf77756ddfe"),
-                            DoctorId = new Guid("7f142e14-2fb1-4e88-bf7c-29c9d33faf60"),
+                            Id = new Guid("1bdf9193-a144-4b2c-82db-536e1daeda7e"),
+                            DoctorId = new Guid("61a671d3-dfd6-40f0-aabb-929160a6e240"),
                             Name = "Roosevelt"
                         },
                         new
                         {
-                            Id = new Guid("909abbec-1fe0-4cf3-ae94-a1c44b9753bd"),
-                            DoctorId = new Guid("731d1963-a780-4942-ac97-50dc5fd2a8d6"),
+                            Id = new Guid("6d3697d8-a2be-4d9c-856e-a4db7db592b5"),
+                            DoctorId = new Guid("e73fc86f-0724-4a0c-a8fe-52fd7238932d"),
                             Name = "Eduardo"
                         },
                         new
                         {
-                            Id = new Guid("b61a5c34-4266-41b7-a15b-46b38792d66b"),
-                            DoctorId = new Guid("0abcfd04-e9e8-47d0-a5ac-2e4ea829158a"),
+                            Id = new Guid("fe1d49ec-11c6-498f-9b5d-db1f58273e54"),
+                            DoctorId = new Guid("19d22233-9758-4e00-8ccd-92311e2ba8d6"),
                             Name = "Wilbert"
                         },
                         new
                         {
-                            Id = new Guid("60b22b07-267c-44ba-86de-7c7ff88a2c58"),
-                            DoctorId = new Guid("da1a37f1-8e7b-4864-b83c-0c1df42c4f80"),
+                            Id = new Guid("4d8f41f5-d279-4b93-a3fb-e5e0f882bf92"),
+                            DoctorId = new Guid("cdeb4840-da71-4c67-94e7-d124fa562d68"),
                             Name = "Tasha"
                         },
                         new
                         {
-                            Id = new Guid("1ef012e0-c502-4e3e-bdfc-d92131289e3c"),
-                            DoctorId = new Guid("7f142e14-2fb1-4e88-bf7c-29c9d33faf60"),
+                            Id = new Guid("b6c39554-980a-424f-a2db-859e15604ea8"),
+                            DoctorId = new Guid("61a671d3-dfd6-40f0-aabb-929160a6e240"),
                             Name = "Max"
                         },
                         new
                         {
-                            Id = new Guid("f5024a5e-e9cd-40a9-ac58-8b88ddba76f1"),
-                            DoctorId = new Guid("b6132b34-f470-49cf-92c4-463cbc3f54e0"),
+                            Id = new Guid("66e4a6ea-4872-4228-86ce-93d4371bf882"),
+                            DoctorId = new Guid("c2c263ee-e86b-45f6-9410-c6d50285120c"),
                             Name = "Bridget"
                         },
                         new
                         {
-                            Id = new Guid("fbb649c4-ffab-41f0-b9dd-8dd8b5d71573"),
-                            DoctorId = new Guid("0abcfd04-e9e8-47d0-a5ac-2e4ea829158a"),
+                            Id = new Guid("82f856c8-69f7-4c53-838c-d1972992f383"),
+                            DoctorId = new Guid("19d22233-9758-4e00-8ccd-92311e2ba8d6"),
                             Name = "Juan"
                         },
                         new
                         {
-                            Id = new Guid("1e51f1e6-b682-4881-b02b-f8fccf706ffe"),
-                            DoctorId = new Guid("87125863-fd72-4e2b-ab90-69f43e8e5928"),
+                            Id = new Guid("a9a74c48-3996-4d14-b2a5-e3e210817dea"),
+                            DoctorId = new Guid("76a11fcf-dd4d-4d0e-8404-fbf2c5ec8389"),
                             Name = "Krystal"
                         },
                         new
                         {
-                            Id = new Guid("7865b992-2d87-41ea-9241-0ed5a3de51d7"),
-                            DoctorId = new Guid("87125863-fd72-4e2b-ab90-69f43e8e5928"),
+                            Id = new Guid("7d0c01f6-372f-41ff-96ed-d51bcd9572b5"),
+                            DoctorId = new Guid("76a11fcf-dd4d-4d0e-8404-fbf2c5ec8389"),
                             Name = "Erma"
                         },
                         new
                         {
-                            Id = new Guid("459974e8-bc5d-4429-bbc6-58c7e3ec9934"),
-                            DoctorId = new Guid("5ca86934-de29-42cc-a77f-f57636a6a968"),
+                            Id = new Guid("d1bc83c4-91c7-4de3-9431-af5ff1b77bfa"),
+                            DoctorId = new Guid("33c644e0-7553-43db-991d-c450fd64adf8"),
                             Name = "Orlando"
                         },
                         new
                         {
-                            Id = new Guid("85e492c1-c047-4d5b-93e1-ef99080a9678"),
-                            DoctorId = new Guid("da1a37f1-8e7b-4864-b83c-0c1df42c4f80"),
+                            Id = new Guid("3441d6d0-72f4-45df-864b-5274933a735c"),
+                            DoctorId = new Guid("cdeb4840-da71-4c67-94e7-d124fa562d68"),
                             Name = "Marvin"
                         },
                         new
                         {
-                            Id = new Guid("eb379f4b-8dee-4a19-843c-c51589bb5e40"),
-                            DoctorId = new Guid("0028f547-7246-422b-a461-4e44e3020f17"),
+                            Id = new Guid("76d12572-28b0-4e6b-a820-76d561cb6348"),
+                            DoctorId = new Guid("c9395ccb-e7aa-4add-9d5d-de61a0edd297"),
                             Name = "Lamar"
                         },
                         new
                         {
-                            Id = new Guid("f2c0dea3-ee95-4d30-8f32-9f5c580d21fe"),
-                            DoctorId = new Guid("15896574-6ca5-4ff6-8851-1bbb309a226f"),
+                            Id = new Guid("6bc1cbb3-0ef1-4af0-b8c1-6e4c47329c6d"),
+                            DoctorId = new Guid("6f09a669-9484-451c-a3ba-4bbafce5a028"),
                             Name = "Joe"
                         },
                         new
                         {
-                            Id = new Guid("f07c7d60-d715-4cf9-9c24-778069d38320"),
-                            DoctorId = new Guid("0abcfd04-e9e8-47d0-a5ac-2e4ea829158a"),
+                            Id = new Guid("8790fb17-2d32-4a8b-b2f5-8c46d5cfd29b"),
+                            DoctorId = new Guid("19d22233-9758-4e00-8ccd-92311e2ba8d6"),
                             Name = "Wendell"
                         },
                         new
                         {
-                            Id = new Guid("b197c712-a24f-4276-b1de-c26d44a7bc50"),
-                            DoctorId = new Guid("0028f547-7246-422b-a461-4e44e3020f17"),
+                            Id = new Guid("1307e1b3-262f-4f34-8e6c-84712c0a4a96"),
+                            DoctorId = new Guid("c9395ccb-e7aa-4add-9d5d-de61a0edd297"),
                             Name = "Sandra"
                         },
                         new
                         {
-                            Id = new Guid("48bd8ac4-3cf7-4a1a-b445-8cd6572ad90b"),
-                            DoctorId = new Guid("5ca86934-de29-42cc-a77f-f57636a6a968"),
+                            Id = new Guid("4126b03d-84b2-4fbe-bf5d-28dfeb1e3d00"),
+                            DoctorId = new Guid("33c644e0-7553-43db-991d-c450fd64adf8"),
                             Name = "Stephanie"
                         },
                         new
                         {
-                            Id = new Guid("3d0f68c1-3cda-4772-a9fa-39c758fc8905"),
-                            DoctorId = new Guid("15896574-6ca5-4ff6-8851-1bbb309a226f"),
+                            Id = new Guid("41f3e020-8f6a-4272-ad3c-21facf5910db"),
+                            DoctorId = new Guid("6f09a669-9484-451c-a3ba-4bbafce5a028"),
                             Name = "Ervin"
                         },
                         new
                         {
-                            Id = new Guid("d66579a4-399e-41dd-9d9c-28c2422b7578"),
-                            DoctorId = new Guid("0028f547-7246-422b-a461-4e44e3020f17"),
+                            Id = new Guid("b6c8e7c9-4e7c-44ff-aead-9b2d8fdc9e4c"),
+                            DoctorId = new Guid("c9395ccb-e7aa-4add-9d5d-de61a0edd297"),
                             Name = "Beth"
                         },
                         new
                         {
-                            Id = new Guid("3140e784-e3a7-4f03-acae-ebb22803f6cc"),
-                            DoctorId = new Guid("15896574-6ca5-4ff6-8851-1bbb309a226f"),
+                            Id = new Guid("6cd1da93-9730-4bf9-af3d-ae702cfdbc29"),
+                            DoctorId = new Guid("6f09a669-9484-451c-a3ba-4bbafce5a028"),
                             Name = "Gretchen"
                         },
                         new
                         {
-                            Id = new Guid("cdfad3fe-d2fe-4300-b332-468573df5459"),
-                            DoctorId = new Guid("b6132b34-f470-49cf-92c4-463cbc3f54e0"),
+                            Id = new Guid("7eaf1561-34ba-4137-a69e-7fd42388bafe"),
+                            DoctorId = new Guid("c2c263ee-e86b-45f6-9410-c6d50285120c"),
                             Name = "Gwendolyn"
                         },
                         new
                         {
-                            Id = new Guid("cc8a7039-769c-4eff-a697-bd7a43f38104"),
-                            DoctorId = new Guid("15896574-6ca5-4ff6-8851-1bbb309a226f"),
+                            Id = new Guid("c54fd8d1-9557-45af-97dc-4d466103c63c"),
+                            DoctorId = new Guid("6f09a669-9484-451c-a3ba-4bbafce5a028"),
                             Name = "Jerry"
                         },
                         new
                         {
-                            Id = new Guid("fb5b6742-a0a2-4d75-855d-594589c2afdb"),
-                            DoctorId = new Guid("5ca86934-de29-42cc-a77f-f57636a6a968"),
+                            Id = new Guid("53843957-3860-40ca-b990-07cd9f163aa2"),
+                            DoctorId = new Guid("33c644e0-7553-43db-991d-c450fd64adf8"),
                             Name = "Mitchell"
                         },
                         new
                         {
-                            Id = new Guid("55866a37-f707-4c9d-8a83-29c0fe06ce16"),
-                            DoctorId = new Guid("0abcfd04-e9e8-47d0-a5ac-2e4ea829158a"),
+                            Id = new Guid("868998f3-c15b-4399-ab42-9c4adc7ef1cd"),
+                            DoctorId = new Guid("19d22233-9758-4e00-8ccd-92311e2ba8d6"),
                             Name = "Maggie"
                         },
                         new
                         {
-                            Id = new Guid("dacc5574-24dd-41bf-8e70-d6830cd8c59b"),
-                            DoctorId = new Guid("db630dc7-9e11-44a4-9c7b-3be040c8dfe1"),
+                            Id = new Guid("3712eb13-7afc-4a52-b7a4-3f67d280d241"),
+                            DoctorId = new Guid("0e3fc154-d0af-4719-9ee8-a7d12563cced"),
                             Name = "Sandy"
                         },
                         new
                         {
-                            Id = new Guid("380aa230-45a1-4435-ac5f-e8378e0f935a"),
-                            DoctorId = new Guid("b6132b34-f470-49cf-92c4-463cbc3f54e0"),
+                            Id = new Guid("16bceabe-d0cb-4089-a7f4-84db80e6c404"),
+                            DoctorId = new Guid("c2c263ee-e86b-45f6-9410-c6d50285120c"),
                             Name = "Lloyd"
                         });
                 });

@@ -106,6 +106,7 @@ namespace Hospital.BL
         {
             Patient? patientdb = _unitOfWork.PatientsRepo.GetByIdWithIssues(patientVM.ID);
             if (patientdb == null) { return; }
+            patientdb.Name= patientVM.Name;
             patientdb.DoctorId= patientVM.DoctorId;
             var selectedIssues = _unitOfWork.IssuesRepo.GetAllWithTracking().Where(a => patientVM.IssuesId.Contains(a.Id)).ToList();
             patientdb.Issues = selectedIssues;

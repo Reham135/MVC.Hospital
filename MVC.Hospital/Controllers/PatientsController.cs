@@ -88,7 +88,10 @@ namespace Hospital.MVC.Controllers
         [HttpPost]
         public IActionResult Edit(PatientEditVM patientVM)
         {
-            if (!ModelState.IsValid) { return View(); }
+            if (!ModelState.IsValid) {
+                viewdataDoctor();
+                viewBagIssue(); 
+                return View(); }
             _patientManager.EditUsingVM(patientVM);
             TempData[Constants.Operation] = Constants.EditPatient;
             return RedirectToAction(nameof(Index));
@@ -100,7 +103,7 @@ namespace Hospital.MVC.Controllers
         public IActionResult Delete(Guid id)
         {
             _patientManager.Delete(id);
-            TempData[Constants.Operation] = Constants.Doctors;
+            TempData[Constants.Operation] = Constants.DeletePatient;
             return RedirectToAction(nameof(Index));
         }
         #endregion
